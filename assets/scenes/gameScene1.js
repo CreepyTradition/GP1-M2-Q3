@@ -34,7 +34,7 @@ export default class gameScene1 extends Phaser.Scene {
 
     const flagObj = map.findObject('Objects', obj => obj.name === 'Flag');
     this.flag = this.physics.add.staticSprite(flagObj.x, flagObj.y - flagObj.height, 'flag');
-    this.physics.add.overlap(this.player, this.flag, () => this.winLevel('GameScene2'), null, this);
+    this.physics.add.overlap(this.player, this.flag, () => this.winLevel('gameScene2'), null, this);
 
     this.cameras.main.startFollow(this.player);
     this.cameras.main.setBounds(0,0, map.widthInPixels, map.heightInPixels);
@@ -76,7 +76,7 @@ export default class gameScene1 extends Phaser.Scene {
   loseLife() {
     this.lives -= 1;
     if (this.lives <= 0) {
-      this.scene.start('GameOverScene');
+      this.scene.start('gameOverScene');
     } else {
       this.scene.restart({ score:this.score, coins:this.coins, lives:this.lives });
     }

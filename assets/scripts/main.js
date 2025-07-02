@@ -3,7 +3,7 @@ import gameScene1 from '../scenes/gameScene1.js';
 import gameScene2 from '../scenes/gameScene2.js';
 import gameScene3 from '../scenes/gameScene3.js';
 import gameOverScene from '../scenes/gameOverScene.js';
-import winScene from '../scenes/WinScene.js';
+import winScene from '../scenes/winScene.js';
 
 const config = {
   type: Phaser.AUTO,

@@ -1,13 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>M2 Summative - ABRANTES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>M2 SUMMATIVE- ABRANTES</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #171616;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .outer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px; /* spacing between top/banner and canvas row */
+      transform: scale(0.5);
+      transform-origin: center;
+    }
+
+    .banner {
+      width: calc(1800px + .1px + .1px); /* width of canvas + side gaps */
+      height: 160px; /* Rectangle height */
+      object-fit: cover;
+    }
+
+    .middle-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px; /* space between side banners and canvas */
+    }
+
+    .side-img {
+      height: 800px;
+      width: auto;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .game-container {
+      width: 1980px;
+      height: 1080px;
+      background: black;
+      flex-shrink: 0;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <div id="game-container"></div>
-    <script src="assets/scripts/phaser.min.js"></script>
-    <script type="module" src="assets/scripts/main.js"></script>
-  </body>
+  <div class="outer-container">
+    <!-- Top banner -->
+    <img class="banner" src="assets/images/top-image.jpg" alt="Top Banner" />
+
+    <!-- Game and side banners -->
+    <div class="middle-row">
+      <img class="side-img" src="assets/images/left-image.jpg" alt="Left Banner" />
+      <div class="game-container" id="game-container"></div>
+      <img class="side-img" src="assets/images/right-image.jpg" alt="Right Banner" />
+    </div>
+
+    <!-- Bottom banner -->
+    <img class="banner" src="assets/images/bottom-image.jpg" alt="Bottom Banner" />
+  </div>
+
+  <script src="assets/scripts/phaser.min.js"></script>
+  <script type="module" src="assets/scripts/main.js"></script>
+</body>
 </html>

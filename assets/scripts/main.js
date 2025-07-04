@@ -7,19 +7,17 @@ import winScene from '../scenes/winScene.js';
 
 const config = {
   type: Phaser.AUTO,
-  width: 1280,
-  height: 720,
+  width: 1980,
+  height: 1080,
   parent: 'game-container',
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 500 },
+      gravity: { y: 300 },
       debug: false
     }
   },
-  scene: [bootScene, gameScene1, gameScene2, gameScene3, gameOverScene, winScene]
+  
+  scene:  [bootScene, gameScene1, gameScene2, gameScene3, gameOverScene, winScene],
 };
-
-window.onload = () => {
   new Phaser.Game(config);
-}

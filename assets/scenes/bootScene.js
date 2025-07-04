@@ -4,6 +4,7 @@ export default class bootScene extends Phaser.Scene {
   }
 preload() {
  
+    this.load.image('spritesheet-tiles-default.pngs', 'assets/images/spritesheet-tiles-default.png');
     this.load.image('coin', 'assets/images/coin.png');
     this.load.image('enemy', 'assets/images/enemy.png');
     this.load.image('flag', 'assets/images/flag.png');

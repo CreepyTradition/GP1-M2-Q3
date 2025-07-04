@@ -7,8 +7,8 @@ export default class gameScene3 extends Phaser.Scene {
   }
   create() {
     const map = this.make.tilemap({ key: 'level3' });
-    const tileset = map.addTilesetImage('tiles');
-    this.platformLayer = map.createLayer('Platforms', tileset, 0,0);
+    const tileset = map.addTilesetImage('spritesheet-tiles-default');
+    this.platformLayer = map.createLayer('Ground', tileset, 0,0);
     this.platformLayer.setCollisionByProperty({ collides: true });
     this.player = this.physics.add.sprite(100,450,'player');
     this.player.setCollideWorldBounds(true);
